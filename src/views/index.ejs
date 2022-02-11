@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+    <header>
+      <h1><%=title%></h1>
+      <div class="navRow">
+        <h4><%=subtitle%></h4>
+        <% for (let i = 0; i < navigation.length; i++) {%>
+          <a href="<%=navigation[i].link%>" class="customA">
+            <h4 class="customButtonText" style="margin-left:20px; margin-top:5px;">
+              <%=navigation[i].page%>
+            </h4>
+          </a>
+        <%}%>
+      </div>
+    </header>
+    <br>
+    <div class="card">
+      <div class="articlePreviewRow">
+        <img style="height: 220px; width: 250px; box-shadow: 0 0 0 0;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/1280px-NASA_logo.svg.png">
+        <div class="articlePreviewColumn">
+          <div>
+            <h3>Welcome to this NASA APOD Viewer</h3>
+            <br>
+            <h4 style="color: black;">This educational resource is designed to be a recurring astrological insight into some interesting 
+              fact relating to the cosmos.</h3>
+            <br>
+            <h4 style="color: black;">"<i>Astronomy Picture of the Day (APOD) is originated, written, coordinated, and edited since 1995 by
+                Robert Nemiroff and Jerry Bonnell. The APOD archive contains the largest collection of annotated 
+                astronomical images on the internet.</i>" - NASA.</h3>
+            <a href="https://apod.nasa.gov/apod/lib/about_apod.html"><h4 class="customButtonText">Learn more</h4></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <h4>Server-side Web App by Jake Bailey.</h4>
+      <h4>Information and media provided by NASA unless stated otherwise.</h4>
+      <a href="#"><h4 class="customButtonText">Back to top</h4></a>
+    </footer>
+	</body>
+</html>

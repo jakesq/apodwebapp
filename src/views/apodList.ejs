@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title><%=title%></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+    <header>
+      <h1><%=title%></h1>
+      <div class="navRow">
+        <h4><%=subtitle%></h4>
+        <% for (let i = 0; i < navigation.length; i++) {%>
+          <a href="<%=navigation[i].link%>" class="customA">
+            <h4 class="customButtonText" style="margin-left:20px; margin-top:5px;">
+              <%=navigation[i].page%>
+            </h4>
+          </a>
+        <%}%>
+      </div>
+    </header>
+    <br>
+      <%for (let i=0; i<articles.length; i++) {%>
+        <div class="articlePreview">
+          <div class="articlePreviewRow">
+            <div class="articlePreviewRow">
+              <div class="imgBox">
+                <img alt="<%=articles[i].mediaType%> of <%=articles[i].title%>" src="<%=articles[i].media%>">
+              </div>
+              <div class="articlePreviewColumn">
+                <div>
+                  <h3 style="margin-bottom: 10px;"><%=articles[i].title%></h3>
+                  <h4 style="color: black;"><%=shortExplanation[i]%></h3>
+                </div>
+                <br>
+                <div>
+                  <h4>Image Credit: <span style="color:black"><%=articles[i].author%></span></h4>
+                  <h4><%=articles[i].datePublished%></h4>
+                </div>
+              </div>
+            </div>
+           <a href="/apodList/<%=articles[i].id%>">
+            <div class="customButton">
+              <i style="font-size:40px; color:#42A5F5;" class="fa">&#xf0a9;</i>
+            </div>
+           </a>
+          </div>
+        </div>
+      <%}%>
+      <footer>
+        <h4>Server-side Web App by Jake Bailey.</h4>
+        <h4>Information and media provided by NASA unless stated otherwise.</h4>
+        <a href="#"><h4 class="customButtonText">Back to top</h4></a>
+      </footer>
+	</body>
+</html>

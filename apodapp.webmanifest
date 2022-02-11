@@ -1,0 +1,9 @@
+{
+    "name": "APOD Viewer",
+    "short_name": "apod",
+    "description": "summative server-app",
+    "start_url": "/src/views/index.ejs",
+    "display": "fullscreen",
+    "theme_color": "#A4A4A4",
+    "background_color": "#A4A4A4"
+}
