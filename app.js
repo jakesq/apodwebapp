@@ -11,10 +11,10 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const config = {
-    user: 'baileyadmin',
-    password: 'Serverpassword1234',
-    server: 'bsummativeserver.database.windows.net',
-    database: 'summativedb'
+    user: '****',
+    password: '****',
+    server: 'server.database.windows.net',
+    database: 'db'
 }
 
 sql.connect(config).catch((err) => debug(err));
@@ -31,7 +31,7 @@ app.use('/apodList', route);
 
 var article = "";
 
-fetchUrl('https://api.nasa.gov/planetary/apod?api_key=82dEnwGp5j8FSnTw15IagWCBBFVvvmi80Ocqrvah', 
+fetchUrl('https://api.nasa.gov/planetary/apod?api_key=****', //Get your own key at: https://api.nasa.gov
     function(error, meta, body) {
         article = JSON.parse(body.toString());
     }
